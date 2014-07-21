@@ -1,0 +1,88 @@
+
+ $pink:#fa726c;
+//extra small screens <768px 
+@media only screen 
+and (max-width : 768px) {
+/* Styles */
+	body{
+		font-size: 1.2em;
+	}
+	.container{
+		padding: 0 10px;
+		margin:0;
+	}
+	.ds-header {
+	    border-bottom: 1px solid darken($pink, 10%);
+	    height: 40px;
+	    position: relative;
+	}
+	p.ds-logo{
+		background: url('../images/logo-icon.png') no-repeat;
+		width: 30px;
+		height: 27px;
+		position: relative;
+		top: 5px;
+		left: 5px;
+	}
+	.ds-navbar {
+	    width: auto;
+	    font-size: 14px;
+	    ul>li>a {
+	        width: auto;
+	        padding: 10px;
+	        &:hover {
+	            color: white;
+	            background-color: none;
+	            text-decoration: none;
+	        }
+	    }
+	}
+
+	h3{
+		font-size: 1.6em;
+		line-height: 1.3em;
+	}
+
+	#training, #contact{ 
+		h2{
+			font-size: 1.8em;
+			line-height: 1.3em;
+		}
+		.ds-content{
+			font-size:14px;
+		}
+
+		p{
+			font-size:14px;
+		}
+	}
+
+	footer {
+
+	    height: 60px;
+	    .ds-f-logo>a {
+	        font-size: 10px;
+	        position: relative;
+	        top: 10px;
+	        left: 20px;
+	    }
+	    .ds-disclaimer {
+	        position: relative;
+	        right: 0px;
+	        top: 10px;
+	        font-size: 12px;
+	        .ds-dis-links {
+	        	display: none;
+	        }
+	    }
+	}
+
+	.ds-xs-hide{
+		display: none !important;
+	}
+
+
+
+
+}
+

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="DesignGyan.com, Computer web designing institutes in Bangalore, Graphic designing companies in Bangalore, web designing institute in Bangalore, web designing software company in Bangalore, graphic designing Bangalore, website designing in Bangalore, best training institutes websites, graphic design courses, graphic desgning institutes in Bangalore, software companies in old airport road Bangalore, web designing companies in Bangalore, web designing companies in old airport road Bangalore, Companies in old airport road, Bangalore, creative graphic designer in Bangalore, graphic design courses in Bangalore, web &amp; graphic design courses in Bangalore, list of multimedia companies in Bangalore, software training institutes in Bangalore, web and graphic design companies in Bangalore">
+    <meta name="description" content="DesignGyan is a Web &amp; Graphic designing company offering a wide spectrum of design capabilities &amp; solutions. Gathering the best talent in the industry, we have formed a core group of highly talented &amp; motivated professionals who have consistently delivered the best in the industry.">
+    <title>DesignGyan.com</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="lib/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+
+    <script type="text/javascript">
+    //phone number validation
+    function numbr(e) {
+        var unicode = e.charCode ? e.charCode : e.keyCode
+        if (unicode != 8) {
+            if (unicode < 48 || unicode > 57)
+                return false
+        }
+    }
+
+    function limitfn(obj, length) {
+        var lungime = length
+        if (obj.value.length > lungime)
+            obj.value = obj.value.substring(0, lungime)
+    }
+
+    function echeck(str) {
+
+        var at = "@"
+        var dot = "."
+        var lat = str.indexOf(at)
+        var lstr = str.length
+        var ldot = str.indexOf(dot)
+        if (str.indexOf(at) == -1) {
+            alert("Invalid E-mail ID")
+            return false
+        }
+
+        if (str.indexOf(at) == -1 || str.indexOf(at) == 0 || str.indexOf(at) == lstr) {
+            alert("Invalid E-mail ID")
+            return false
+        }
+
+        if (str.indexOf(dot) == -1 || str.indexOf(dot) == 0 || str.indexOf(dot) == lstr) {
+            alert("Invalid E-mail ID")
+            return false
+        }
+
+        if (str.indexOf(at, (lat + 1)) != -1) {
+            alert("Invalid E-mail ID")
+            return false
+        }
+
+        if (str.substring(lat - 1, lat) == dot || str.substring(lat + 1, lat + 2) == dot) {
+            alert("Invalid E-mail ID")
+            return false
+        }
+
+        if (str.indexOf(dot, (lat + 2)) == -1) {
+            alert("Invalid E-mail ID")
+            return false
+        }
+
+        if (str.indexOf(" ") != -1) {
+            alert("Invalid E-mail ID")
+            return false
+        }
+
+        return true
+    }
+
+    function verify() {
+        var themessage = "Please fill the required fields: ";
+        var c = 0;
+
+        if (document.inquiryForm.name.value == "") {
+            if (c == 1) {
+                themessage = themessage + ", ";
+            }
+            themessage = themessage + "Name";
+            c = 1;
+        }
+        if (document.inquiryForm.email.value == "") {
+            if (c == 1) {
+                themessage = themessage + ", ";
+            }
+            themessage = themessage + "Email address";
+            c = 1;
+        } else {
+            if (echeck(document.inquiryForm.email.value) == false) {
+                document.inquiryForm.email.value = ""
+                document.inquiryForm.email.focus()
+                return false
+            }
+        }
+        if (document.inquiryForm.mobileNum.value == "") {
+            if (c == 1) {
+                themessage = themessage + ", ";
+            }
+            themessage = themessage + "Mobile Number";
+            c = 1;
+        }
+        if (document.inquiryForm.message.value == "") {
+            if (c == 1) {
+                themessage = themessage + ", ";
+            }
+            themessage = themessage + "Message";
+            c = 1;
+        }
+        //alert if fields are empty and cancel form submit
+        if (themessage == "Please fill the required fields: ") {
+            document.agreement.address.value = document.agreement.address1.value + " " + document.agreement.address2.value;
+            document.agreement.submit();
+
+        } else {
+            alert(themessage);
+            return false;
+        }
+    }
+    </script>
+
+</head>
+
+<body id="contact">
+
+
+    <!-- navbar -->
+
+    <div class="ds-header">
+        <div class="container ds-pos-r">
+            
+                <a href="index.html">
+                    <p class="ds-logo" title="DesignGyan logo"></p>
+                </a>
+            
+            <div class="ds-navbar">
+                <ul>
+                    <li class="item1"><a href="#" class="ds-space">&nbsp;</a>
+                    </li>
+                    <li class="item2"><a href="index.html">Home</a>
+                    </li>
+                    <li class="item3"><a href="training.html">Trainings</a>
+                    </li>
+                    <li class="item4"><a href="#"  class="active">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- end of navbar -->
+    <!-- body -->
+    <div class="ds-content-bg">
+        <div class="panel text-center">
+            <div class="ds-contact-header">
+                <h3>
+                    <strong>Contact DesignGyan for any information regarding the courses offered or for any assistance.</strong>
+                </h3>
+                <p>Call : 0890-462-8010 | Email : <a href="mailto:designgyan2014@gmail.com">designgyan2014@gmail.com</a> | Fill the below form</p>
+                <br>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="col-sm-4 well">
+
+                <form role="form" id="inquiryForm" name="inquiryForm" method="post" action="contact.php">
+                    <div class="form-group">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <label for="exampleInputName">Name
+                            <span class="ds-required">*</span>
+                        </label>
+                        <input type="Name" class="form-control" id="name" name="name" placeholder="Enter Name">
+                    </div>
+                    <div class="form-group">
+                        <span class="glyphicon glyphicon-envelope"></span>
+                        <label for="exampleInputEmail1">Email address
+                            <span class="ds-required">*</span>
+                        </label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <span class="glyphicon glyphicon-phone"></span>
+                        <label for="mobileNum">Mobile Number
+                            <span class="ds-required">*</span>
+                        </label>
+                        <input type="number" class="form-control" id="mobileNum" name="mobileNum" onkeypress="return numbr(event)" onkeyup="return limitfn(this, 10)" placeholder="Enter Mobile Number"></input>
+                    </div>
+                    <div class="form-group">
+                        <span class="glyphicon glyphicon-comment"></span>
+                        <label for="message">Message
+                            <span class="ds-required">*</span>
+                        </label>
+                        <textarea id="message" name="message" class="form-control" rows="3" placeholder="Enter Message"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <span class="ds-required">
+                            <strong>*</strong>
+                        </span>Required Fields
+                    </div>
+                    <input type="submit" class="ds-button-blue" name="submit" value="Send a message" onclick="javascript:return verify();">
+                </form>
+            </div>
+
+
+            <div class="col-sm-offset-1 col-sm-7 well">
+
+                <div class="col-sm-12">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d3888.1251497553353!2d77.66860260000001!3d12.963842699999983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!1i0!3e6!4m0!4m5!1s0x3bae13e3f34aa823%3A0xe84b8959a33abb27!2sLB+Shastry+Nagar+Main+Rd%2C+Islampur%2C+Vimanapura%2C+Bangalore%2C+Karnataka+560017!3m2!1d12.963842699999999!2d77.6686026!5e0!3m2!1sen!2sin!4v1403734657335" width="100%" height="300px" frameborder="0" style="border:0"></iframe>
+                    <br>
+                </div>
+
+                <div class="col-sm-12">
+                    <address>
+                        <br>
+                        <strong>DesignGyan</strong>
+                        <br>#24, 1st Main, 5th cross, L.B.Shastri Nagar,
+                        <br>Bangalore-17, India
+                        <br>
+                        <abbr title="Phone">P :</abbr>0890-462-8010
+                        <br>
+                        <abbr title="Email">E :</abbr> <a href="mailto:designgyan2014@gmail.com">designgyan2014@gmail.com</a>
+
+                    </address>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- end of body -->
+
+
+
+
+
+    <!-- Start of footer -->
+    <footer>
+        <div class="container">
+            <div class="ds-f-logo ds-xs-hide">
+                <a href="index.html">
+                    <img src="images/logo-white.png" alt="DesignGyan logo">
+                </a>
+            </div>
+            <div class="ds-disclaimer">
+                <div class="ds-dis-links">
+                    <!-- <a href="about.html">About</a> | --> <a href="index.html">Home</a> | <a href="training.html">Trainings</a> 
+                    <!-- | <a href="portfolio.html">Portfolio</a> -->| <a href="#" class="active">Contact</a>
+                </div>
+                &copy; Copyright 2014
+                <br>All rights reserved. <a href="index.html">DesignGyan.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- end of footer -->
+
+
+
+
+    <script src="lib/jquery.js"></script>
+    <script src="lib/jquery-ui.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script>
+    $(function() {
+
+    });
+    </script>
+
+</body>
+
+</html>

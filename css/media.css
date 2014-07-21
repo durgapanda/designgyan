@@ -1,0 +1,62 @@
+@media only screen and (max-width: 768px) {
+  /* Styles */
+  body {
+    font-size: 1.2em; }
+
+  .container {
+    padding: 0 10px;
+    margin: 0; }
+
+  .ds-header {
+    border-bottom: 1px solid #f8433b;
+    height: 40px;
+    position: relative; }
+
+  p.ds-logo {
+    background: url("../images/logo-icon.png") no-repeat;
+    width: 30px;
+    height: 27px;
+    position: relative;
+    top: 5px;
+    left: 5px; }
+
+  .ds-navbar {
+    width: auto;
+    font-size: 14px; }
+    .ds-navbar ul > li > a {
+      width: auto;
+      padding: 10px; }
+      .ds-navbar ul > li > a:hover {
+        color: white;
+        background-color: none;
+        text-decoration: none; }
+
+  h3 {
+    font-size: 1.6em;
+    line-height: 1.3em; }
+
+  #training h2, #contact h2 {
+    font-size: 1.8em;
+    line-height: 1.3em; }
+  #training .ds-content, #contact .ds-content {
+    font-size: 14px; }
+  #training p, #contact p {
+    font-size: 14px; }
+
+  footer {
+    height: 60px; }
+    footer .ds-f-logo > a {
+      font-size: 10px;
+      position: relative;
+      top: 10px;
+      left: 20px; }
+    footer .ds-disclaimer {
+      position: relative;
+      right: 0px;
+      top: 10px;
+      font-size: 12px; }
+      footer .ds-disclaimer .ds-dis-links {
+        display: none; }
+
+  .ds-xs-hide {
+    display: none !important; } }
